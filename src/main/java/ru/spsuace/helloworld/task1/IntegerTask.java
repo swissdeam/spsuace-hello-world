@@ -1,6 +1,8 @@
 package ru.spsuace.helloworld.task1;
 
 
+
+
 /**
  * Возможно вам понадобится класс Math с его методами. Например, чтобы вычислить квадратный корень, достаточно написать
  * Math.sqrt(1.44)
@@ -13,9 +15,14 @@ public class IntegerTask {
      * Сумма чисел от 1 до n (1 + 2 + 3 + ... + n)
      * Пример: (5) -> 15
      */
-    public static int sum(int n) {
-        return 0;
+    public static int sum(int n){
+       int result=0;
+                for (int i=1; i <= n; i++){
+                    result = result + i;
+                }
+                return result;
     }
+
 
     /**
      * Гусеница поднимается по стене длиной height на высоту top за день, ночью гусеница сползает на bottom.
@@ -24,6 +31,7 @@ public class IntegerTask {
      * Пример: (10, 3, 2) -> 8
      */
     public static int snake(int height, int top, int bottom) {
+        
         return 0;
     }
 
