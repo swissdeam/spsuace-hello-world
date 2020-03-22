@@ -1,7 +1,7 @@
 package ru.spsuace.helloworld.task1;
 
 
-
+import javax.swing.*;
 
 /**firj
  * Возможно вам понадобится класс Math с его методами. Например, чтобы вычислить квадратный корень, достаточно написать
@@ -32,18 +32,21 @@ public class IntegerTask {
      * Пример: (10, 3, 2) -> 8
      */
     public static int snake(int height, int top, int bottom) {
-        int way=0;
-        int days=0;
-            for(int days=0; way < height; days++ ){
-                way= way + (top - bottom);
+        int days = 0;
+        int nights = 0;
+        int now = 0;
+        int result = 0;
+        while (now < height){
+            days = days + 1;
+            now = now + top;
+            if (now >= height){
+                break;
             }
+            nights = nights + 1;
+            now = now - bottom;
+        }
 
-        if (way >= height) {
-            return days;
-        }
-        else {
-            return Integer.MAX_VALUE;
-        }
+    return days;
     }
 
     /**
@@ -51,7 +54,11 @@ public class IntegerTask {
      * Пример: (454355, 3) -> 3
      */
     public static int kDecimal(int n, int order) {
-        return 0;
+        for (int i = 1; i <order ; i++) {
+            n = n / 10;
+        }
+        int result = n % 10;
+        return result;
     }
 
 
@@ -60,6 +67,10 @@ public class IntegerTask {
      * Пример: (5) -> 120
      */
     public static long factorial(byte n) {
-        return 0;
+        int result = 1;
+        for (int i = 1; i <=n ; i++) {
+            result = result * i;
+        }
+        return result;
     }
 }
